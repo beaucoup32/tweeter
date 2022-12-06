@@ -1,0 +1,46 @@
+form {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+label {
+  flex-basis: 50%;
+}
+
+#tweet-text{
+  flex-basis: 50%;
+  background: none;
+  border: none;
+}
+
+.top {
+  border-bottom: solid;
+}
+
+div {
+  padding-top: 10px;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+
+}
+
+
+.fa-minus {
+  width: 100%;
+  flex-basis: 100%;
+}
+
+button {
+  font-family: 'Bungee';
+  border: none;
+  background-color: mediumvioletred;
+  color: #FFFFFF;
+}
+
+.counter {
+  font-family: 'Bungee';
+}
+
