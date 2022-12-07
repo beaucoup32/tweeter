@@ -1,0 +1,101 @@
+.twt {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: antiquewhite;
+  border: solid;
+  border-radius: 2px;
+}
+
+.author {
+  font-family: 'Source Sans Pro';
+  display: flex;
+  width: 100%;
+  height: 64px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  
+  align-items: center;
+}
+
+.divider {
+  width: 98%;
+  border-bottom: solid;
+  flex-direction: column;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px
+  /* align-items: center; */
+}
+
+p {
+  font-weight: 600;
+  flex-basis: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h3 {
+  font-weight: 300;
+  flex-grow: 1;
+}
+
+.tag {
+  color: rgb(102, 32, 60);
+  font-weight: 600;
+  text-align: right;
+}
+
+img {
+  padding-right: 15px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  font-size: small;
+  align-content: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.logos {
+  display: flex;
+  gap: 10px
+}
+
+.date {
+  flex-basis: content;
+}
+
+.fa-flag {
+  transition: color 200ms;
+  align-self: center;
+}
+
+.fa-flag:hover {
+  color: yellow;
+}
+
+.fa-repeat {
+  transition: color 200ms;
+  align-self: center;
+}
+
+.fa-repeat:hover {
+  color: cyan;
+}
+
+.fa-heart {
+  transition: color 200ms;
+  align-self: center;
+}
+
+.fa-heart:hover {
+  color: crimson;
+}

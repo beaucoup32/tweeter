@@ -3,23 +3,24 @@ form {
   /* flex-direction: column; */
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-basis: 100%;
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 label {
   flex-basis: 100%;
-  vertical-align: bottom;
+  text-align: bottom;
 }
 
 #tweet-text{
-  /* padding-top: 10px; */
-  display: inline-block;
   resize: none;
   width: 100%;
   background: none;
   border: 1px;
-  min-height: 40px;
   line-height: 30px;
   outline: none;
+  font-weight: 600;
 }
 
 .top {

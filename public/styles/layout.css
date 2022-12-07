@@ -31,11 +31,23 @@ body {
   align-items: center;
 }
 
-main {
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   width: 90%;
   
+}
+
+.new-tweet {
+
+  transition: box-shadow 300ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.new-tweet:hover {
+  box-shadow: 10px 10px 5px;
 }
