@@ -1,5 +1,5 @@
 .twt {
-
+  transition: box-shadow 300ms;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,15 +8,19 @@
   border-radius: 2px;
 }
 
+.twt:hover {
+  box-shadow: 10px 10px 5px;
+}
+
 .author {
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   display: flex;
   width: 100%;
   height: 64px;
   padding-top: 15px;
   padding-right: 10px;
   padding-left: 10px;
-  
+
   align-items: center;
 }
 
@@ -27,7 +31,7 @@
   align-self: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px
+  gap: 15px;
   /* align-items: center; */
 }
 
@@ -66,7 +70,7 @@ footer {
 
 .logos {
   display: flex;
-  gap: 10px
+  gap: 10px;
 }
 
 .date {

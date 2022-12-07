@@ -41,13 +41,12 @@ body {
 
 .new-tweet {
 
-  transition: box-shadow 300ms;
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 10px;
   align-items: center;
+  gap: 15px
 
 }
 
-.new-tweet:hover {
-  box-shadow: 10px 10px 5px;
-}
