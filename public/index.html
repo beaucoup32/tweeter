@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -24,14 +27,18 @@
     <!-- New Tweets CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Char Counter JS -->
+    <script src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -59,17 +66,19 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        
         <form>
-          <div class="top">
-          <label for="tweet-text"><b>What are you humming about?</b></label>
+          <div class="compose-tweet top">
+          <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
         </div>
 
-          <div>
+          <div class="compose-tweet bottom">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      
       </section>
     </main>
     

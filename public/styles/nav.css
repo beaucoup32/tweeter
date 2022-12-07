@@ -20,9 +20,14 @@ nav {
 }
 
 .w {
-
+  
+  display: flex;
+  flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
+  align-content: flex-end;
+ 
+  
 }
 
 .fa-angles-down {
