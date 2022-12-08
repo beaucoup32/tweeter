@@ -1,0 +1,17 @@
+.error {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: solid;
+  border-color: crimson;
+  font-weight: 600;
+  color: crimson;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-height: 50px;
+  align-items: center;
+}
+
+.fa-triangle-exclamation {
+  color: crimson;
+}

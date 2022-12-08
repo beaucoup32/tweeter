@@ -32,6 +32,9 @@
 
     <!-- Tweets Box CSS -->
     <link rel="stylesheet" href="/styles/tweet-box.css" type="text/css">
+
+    <!-- Error CSS -->
+    <link rel="stylesheet" href="/styles/error.css" type="text/css">
     
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -71,10 +74,13 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div class="error"><p class="err"></p>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
       <form class="post-tweet">
         <div class="compose-tweet top">
-        <label for="tweet-text">What are you humming about?</label>
-        <input name="text" id="tweet-text"></input>
+        <!-- <label for="tweet-text">What are you humming about?</label> -->
+        <input placeholder="What's on your mind? . . . " name="text" id="tweet-text"></input>
       </div>
 
         <div class="compose-tweet bottom">

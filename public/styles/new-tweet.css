@@ -8,12 +8,8 @@ form {
   padding-bottom: 10px;
 }
 
-label {
-  flex-basis: 100%;
-  text-align: bottom;
-}
-
 #tweet-text{
+  margin-top: 10px;
   display: flex;
   resize: none;
   width: 100%;

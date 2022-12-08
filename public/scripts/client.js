@@ -5,7 +5,17 @@
  */
 
 $(() => {
+
+  let $error = $('.error');
+  $error.hide();
+  
   const createTweetElement = (tweetData) => {
+    // prevent tags being ready by input
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
 
     let $tweet = $(`
       <article class="twt 1">
@@ -15,7 +25,7 @@ $(() => {
             <h3>${tweetData.user.name}</h3>
             <h3 class="tag">${tweetData.user.handle}</h3>
           </header>
-          <p>${tweetData.content.text}</p>
+          <p>${escape(tweetData.content.text)}</p>
           </div>
         <div>
           <footer>
@@ -43,7 +53,6 @@ $(() => {
       const $tweet = createTweetElement(tweet);
       $('.new-tweet').prepend($tweet);
     }
-
     
   }
   
@@ -53,6 +62,8 @@ $(() => {
     })
 
   }
+
+  
 
   loadtweets();
 
@@ -68,16 +79,25 @@ $(() => {
 
     if (!input) {
 
-      return alert('Empty');
+      $('.err').text('Error: Please type at least 1 character.');
+
+      return $error.slideDown();
     }
 
     if (input.length > 140) {
-      return alert('Character Limit Exceeded')
+
+      $('.err').text(`Error: Maximum 140 characters (${input.length})`);
+      return $error.slideDown();
     }
 
     $.post('/tweets', data, (response) => {
       loadtweets();
     });
+
+    let $input = $('#tweet-text');
+
+    $error.slideUp();
+    $input.val('');
 
   })
 })
