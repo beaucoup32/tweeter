@@ -33,16 +33,16 @@ nav {
 .fa-angles-down {
   aspect-ratio: 1 / 1;
   color: red;
-  animation: 4s linear 0s infinite alternate up-down;
+  animation: 600ms linear 0s infinite alternate up-down;
 }
 
 @keyframes up-down {
   from {
     
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   to {
     
-    transform: translateY(-10px);
+    transform: translateY(5px);
   }
 }
