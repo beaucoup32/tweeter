@@ -35,6 +35,9 @@ $(() => {
 
   const renderTweets = (tweetArr) => {
 
+    //clear tweet section
+    $('.new-tweet').empty();
+    
     for (let tweet of tweetArr) {
       
       const $tweet = createTweetElement(tweet);
@@ -46,7 +49,6 @@ $(() => {
   
   const loadtweets = () => {
     $.getJSON('/tweets', (data) => {
-      console.log(data);
       renderTweets(data);
     })
 
@@ -61,10 +63,20 @@ $(() => {
     event.preventDefault();
 
     const data = $form.serialize();
-    $.post('/tweets', data, (response) => {
 
-      console.log(data);
-      // console.log(response);
+    const input = data.substring(5);
+
+    if (!input) {
+
+      return alert('Empty');
+    }
+
+    if (input.length > 140) {
+      return alert('Character Limit Exceeded')
+    }
+
+    $.post('/tweets', data, (response) => {
+      loadtweets();
     });
 
   })

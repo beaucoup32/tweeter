@@ -37,9 +37,11 @@
 
 p {
   font-weight: 600;
-  flex-basis: 100%;
+  flex-grow: 1;
   padding-left: 10px;
   padding-right: 10px;
+  inline-size: inherit;
+  overflow-wrap: break-word;
 }
 
 h3 {
