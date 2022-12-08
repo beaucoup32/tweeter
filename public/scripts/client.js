@@ -1,12 +1,15 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
 $(() => {
+  const $counter = $('.counter')
+  const $error = $('.error');
+  const $form = $('.post-tweet');
+  const $input = $('#tweet-text');
 
-  let $error = $('.error');
   $error.hide();
   
   const createTweetElement = (tweetData) => {
@@ -68,11 +71,10 @@ $(() => {
   loadtweets();
 
 
-  const $form = $('.post-tweet');
 
   $form.on('submit', (event) => {
     event.preventDefault();
-
+    
     const data = $form.serialize();
 
     const input = data.substring(5);
@@ -91,13 +93,13 @@ $(() => {
     }
 
     $.post('/tweets', data, (response) => {
+      $input.val('');
+      $counter.val('140')
       loadtweets();
     });
 
-    let $input = $('#tweet-text');
 
     $error.slideUp();
-    $input.val('');
 
   })
 })
