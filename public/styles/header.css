@@ -3,11 +3,10 @@
   height: 520px;
   width: 100%;
   background-color: mediumvioletred;
-  background-image: url('/images/gplay.png');
+  background-image: url("/images/gplay.png");
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 h2 {
@@ -15,13 +14,11 @@ h2 {
 }
 
 @media only screen and (min-width: 1024px) {
-
   .user {
     flex-basis: 40%;
     margin-top: 195px;
     padding-left: 10px;
     position: static;
     border-radius: 10px;
-
   }
 }

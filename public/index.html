@@ -56,8 +56,10 @@
     <nav>
       <div class="text t"><span>tweeter</span></div>
 
-      <div class="text w"><span><b>Write</b> a new tweet</br>
+      <div class="text w"><button class="write">
+        <span><b>Write</b> a new tweet</br>
         <i class="fa-solid fa-angles-down"></i>
+        </button>
       </span>
     </div>
     </nav>
@@ -79,12 +81,12 @@
       </div>
       <form class="post-tweet">
         <div class="compose-tweet top">
-        <!-- <label for="tweet-text">What are you humming about?</label> -->
+        <label for="tweet-text">Compose a Tweet</label>
         <input placeholder="What's on your mind? . . . " name="text" id="tweet-text"></input>
       </div>
 
         <div class="compose-tweet bottom">
-          <button type="submit">Tweet</button>
+          <button class='tweet' type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
