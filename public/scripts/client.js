@@ -48,7 +48,7 @@ $(() => {
   };
 
   const renderTweets = (tweetArr) => {
-    
+
     //clear tweet section
     $(".new-tweet").empty();
 
@@ -92,4 +92,14 @@ $(() => {
 
     $error.slideUp();
   });
+
+  const $writeTweet = $('.write');
+  const $postTweet = $('.post-tweet');
+
+  $writeTweet.on('click', (event) => {
+    event.preventDefault()
+
+    $postTweet.slideToggle();
+
+  })
 });
