@@ -13,3 +13,15 @@
 h2 {
   color: ghostwhite;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  .user {
+    flex-basis: 40%;
+    margin-top: 195px;
+    padding-left: 10px;
+    position: static;
+    border-radius: 10px;
+
+  }
+}

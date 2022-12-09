@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -29,6 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-color: rgb(20, 7, 61); */
 }
 
 .container {
@@ -36,17 +39,27 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 90%;
-  
 }
 
 .new-tweet {
-
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   margin-bottom: 10px;
   align-items: center;
-  gap: 15px
-
+  gap: 15px;
 }
 
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .container {
+    flex-basis: 50%;
+    margin-top: 195px;
+  }
+}

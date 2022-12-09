@@ -2,7 +2,8 @@
 nav {
   
   height: 120px;
-  background-color: #4056A1;
+  /* background-color: #4056A1; */
+  background: none;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -44,5 +45,11 @@ nav {
   to {
     
     transform: translateY(5px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
   }
 }
