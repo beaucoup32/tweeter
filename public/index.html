@@ -54,13 +54,13 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div class="text logo">
+      <div class="logo">
         <span>tweeter</span>
       </div>
 
-      <div class="text arrow">
+      <div class="arrow">
         <button class="write">
-        <span><b>Write</b> a new tweet</br>
+        <span><strong>Write</strong> a new tweet</br>
         <i class="fa-solid fa-angles-down"></i>
         </button>
         </span>
@@ -81,18 +81,19 @@
       <div class="error"><p class="err"></p>
         <i class="fa-solid fa-triangle-exclamation"></i>
       </div>
-      <form class="post-tweet">
-        <div class="compose-tweet top">
-          <label for="tweet-text">Compose a Tweet</label>
-          <input placeholder="What's on your mind? . . . " name="text" id="tweet-text"></input>
-        </div>
+      <div class="tweet-container">
+        <form class="post-tweet">
+          <div class="compose-tweet top">
+            <label for="tweet-text">Compose a Tweet</label>
+            <input placeholder="What's on your mind? . . . " name="text" id="tweet-text"></input>
+          </div>
 
-        <div class="compose-tweet bottom">
-          <button class='tweet' type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-
+          <div class="compose-tweet bottom">
+            <button class='tweet' type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </div>
       <section class="new-tweet"></section>
     </main>
     
