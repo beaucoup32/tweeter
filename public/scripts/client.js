@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 const createTweetElement = (tweetData) => {
-
   // prevent tags being read by input
   const escape = function (str) {
     let div = document.createElement("div");
@@ -35,14 +34,15 @@ const createTweetElement = (tweetData) => {
     </article>
     `);
 
+  // returns jquery object
   return $tweet;
 };
 
 const renderTweets = (tweetArr) => {
-
   //clear tweet section
   $(".new-tweet").empty();
 
+  //add new tweets to top
   for (let tweet of tweetArr) {
     const $tweet = createTweetElement(tweet);
     $(".new-tweet").prepend($tweet);
@@ -64,25 +64,27 @@ $(() => {
   $(".post-tweet").on("submit", (event) => {
     event.preventDefault();
 
+    // convert form data to be read by server
     const data = $(".post-tweet").serialize();
-    const input = $("#tweet-text").val()
+
+    const input = $("#tweet-text").val();
 
     if (!input) {
-      
       $(".err").text("Error: Please type at least 1 character.");
 
       return $error.slideDown();
     }
 
     if (input.length > 140) {
-
       $(".err").text(`Error: Maximum 140 characters (${input.length})`);
       return $error.slideDown();
     }
 
     $.post("/tweets", data, (response) => {
-
+      // reset input after submission
       $("#tweet-text").val("");
+
+      // reset counter
       $(".counter").val("140");
       loadtweets();
     });
@@ -90,10 +92,10 @@ $(() => {
     $error.slideUp();
   });
 
-  $('.write').on('click', (event) => {
-
-    event.preventDefault()
-    $('.tweet-container').slideToggle();
-    $('#tweet-text').focus();
-  })
+  // toggle text area
+  $(".write").on("click", (event) => {
+    event.preventDefault();
+    $(".tweet-container").slideToggle();
+    $("#tweet-text").focus();
+  });
 });
