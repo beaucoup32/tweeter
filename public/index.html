@@ -54,25 +54,27 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div class="text t"><span>tweeter</span></div>
+      <div class="text logo">
+        <span>tweeter</span>
+      </div>
 
-      <div class="text w"><button class="write">
+      <div class="text arrow">
+        <button class="write">
         <span><b>Write</b> a new tweet</br>
         <i class="fa-solid fa-angles-down"></i>
         </button>
-      </span>
-    </div>
+        </span>
+      </div>
     </nav>
   
     <header class="user">
       <div>
         <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div>
         <h2>beauCOUP*</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -81,9 +83,9 @@
       </div>
       <form class="post-tweet">
         <div class="compose-tweet top">
-        <label for="tweet-text">Compose a Tweet</label>
-        <input placeholder="What's on your mind? . . . " name="text" id="tweet-text"></input>
-      </div>
+          <label for="tweet-text">Compose a Tweet</label>
+          <input placeholder="What's on your mind? . . . " name="text" id="tweet-text"></input>
+        </div>
 
         <div class="compose-tweet bottom">
           <button class='tweet' type="submit">Tweet</button>
@@ -92,7 +94,6 @@
       </form>
 
       <section class="new-tweet"></section>
-      </section>
     </main>
     
   </body>

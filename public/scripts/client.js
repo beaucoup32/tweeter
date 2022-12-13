@@ -66,12 +66,11 @@ $(() => {
 
   loadtweets();
 
-  $form.on("submit", (event) => {
+  $(".post-tweet").on("submit", (event) => {
     event.preventDefault();
 
-    const data = $form.serialize();
-
-    const input = data.substring(5);
+    const data = $(".post-tweet").serialize();
+    const input = $("#tweet-text").val()
 
     if (!input) {
       $(".err").text("Error: Please type at least 1 character.");
@@ -85,7 +84,7 @@ $(() => {
     }
 
     $.post("/tweets", data, (response) => {
-      $input.val("");
+      $("#tweet-text").val("");
       $counter.val("140");
       loadtweets();
     });

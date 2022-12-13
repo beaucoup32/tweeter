@@ -17,12 +17,12 @@ nav {
   border: none;
 }
 
-.t {
+.logo {
   font-family: "Bungee", sans-serif;
   font-size: xx-large;
 }
 
-.w {
+.arrow {
   display: flex;
   flex-direction: column;
   font-family: "Source Sans Pro", sans-serif;
