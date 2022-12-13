@@ -61,5 +61,6 @@ html {
   .container {
     flex-basis: 50%;
     margin-top: 195px;
+    max-width: 55%;
   }
 }
